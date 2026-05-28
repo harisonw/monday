@@ -19,11 +19,19 @@ def build_llm(model: str, api_key: str) -> ChatGoogleGenerativeAI:
     )
 
 
-def run_risk_assessment(llm: ChatGoogleGenerativeAI, app: dict) -> RiskAssessment:
+def run_risk_assessment(llm: ChatGoogleGenerativeAI, app: dict, config: dict = None) -> RiskAssessment:
     """
     Stage 1: Run risk assessment on a single application.
     Returns a validated RiskAssessment Pydantic object.
     """
+    run_config = config.copy() if config else {}
+    if "callbacks" in run_config and run_config["callbacks"]:
+        run_config.setdefault("metadata", {})
+        run_config["metadata"].update({
+            "langfuse_trace_name": "Client Intake - Risk Assessment",
+            "langfuse_session_id": app["application_id"],
+            "langfuse_tags": ["crestview", "risk-assessment"],
+        })
     chain = RISK_PROMPT | llm.with_structured_output(RiskAssessment, method="json_schema")
     return chain.invoke({
         "application_id":    app["application_id"],
@@ -34,19 +42,28 @@ def run_risk_assessment(llm: ChatGoogleGenerativeAI, app: dict) -> RiskAssessmen
         "submission_date":   app["submission_date"],
         "status":            app["status"],
         "description":       app["description"],
-    })
+    }, config=run_config)
 
 
 def run_onboarding_summary(
     llm: ChatGoogleGenerativeAI,
     app: dict,
     risk: RiskAssessment,
+    config: dict = None,
 ) -> OnboardingSummary:
     """
     Stage 2: Run onboarding summary using application data + risk context.
     The risk assessment output feeds directly into this prompt — sequential dependency.
     Returns a validated OnboardingSummary Pydantic object.
     """
+    run_config = config.copy() if config else {}
+    if "callbacks" in run_config and run_config["callbacks"]:
+        run_config.setdefault("metadata", {})
+        run_config["metadata"].update({
+            "langfuse_trace_name": "Client Intake - Onboarding Summary",
+            "langfuse_session_id": app["application_id"],
+            "langfuse_tags": ["crestview", "onboarding-summary"],
+        })
     chain = SUMMARY_PROMPT | llm.with_structured_output(OnboardingSummary, method="json_schema")
     return chain.invoke({
         "application_id":    app["application_id"],
@@ -63,7 +80,7 @@ def run_onboarding_summary(
         "requires_enhanced_due_diligence": str(risk.requires_enhanced_due_diligence),
         "compliance_reasoning":           risk.compliance_reasoning,
         "recommended_actions":            "\n".join(f"- {a}" for a in risk.recommended_actions),
-    })
+    }, config=run_config)
 
 
 def process_application(
@@ -71,17 +88,19 @@ def process_application(
     app: dict,
     rate_limit_delay: float = 1.5,
     max_retries: int = 2,
+    callbacks: list = None,
 ) -> tuple[RiskAssessment, OnboardingSummary]:
     """
     Run the full two-stage pipeline for a single application.
     Returns (RiskAssessment, OnboardingSummary).
     Raises RuntimeError if all retries exhausted.
     """
+    config = {"callbacks": callbacks} if callbacks else {}
     for attempt in range(max_retries + 1):
         try:
-            risk = run_risk_assessment(llm, app)
+            risk = run_risk_assessment(llm, app, config=config)
             time.sleep(rate_limit_delay)
-            summary = run_onboarding_summary(llm, app, risk)
+            summary = run_onboarding_summary(llm, app, risk, config=config)
             time.sleep(rate_limit_delay)
             return risk, summary
         except Exception as e:

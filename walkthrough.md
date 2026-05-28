@@ -436,7 +436,7 @@ graph TD
         G["Google Vertex AI<br/>(private endpoint, no training on data)"]
         H["httpx with connection pooling"]
         I["Compliance HITL gate<br/>(no status → Approved without human sign-off)"]
-        J["LangSmith tracing<br/>(full audit trail per run)"]
+        J["Langfuse tracing<br/>(full audit trail per run)"]
         K["monday.com webhooks<br/>(trigger downstream steps)"]
     end
 
@@ -458,7 +458,7 @@ graph TD
 
 2. **Human-in-the-loop (Priya's concern):** Add a monday.com column permission rule: the "Compliance Officer Review & Sign-Off" subitem Status cannot be set to green without a certified compliance officer manually approving. The AI output is _input_ to the human decision, never the decision itself.
 
-3. **Audit trail:** Integrate **LangSmith** (LangChain's observability platform) — every prompt, response, token count, and latency is logged per run with a trace ID. This gives Priya's team a complete, immutable record of what the AI was shown and what it concluded.
+3. **Audit trail:** Integrated **Langfuse** (LLM engineering platform) — every prompt, response, token count, and latency is logged per run with a trace ID. This gives Priya's team a complete, immutable record of what the AI was shown and what it concluded.
 
 4. **Real document parsing:** Replace the CSV description field with actual PDF/document extraction using `langchain.document_loaders` + `unstructured` — handles the messy multi-format inputs David's team receives (PDFs, scans, emails).
 
@@ -480,13 +480,43 @@ graph TD
 
 ## 12. Files Reference
 
-| File                                                                                                     | Purpose                    | Key Pattern                                                    |
-| :------------------------------------------------------------------------------------------------------- | :------------------------- | :------------------------------------------------------------- |
-| [main.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/main.py)                             | Orchestrates all 3 steps   | Sequential execution, per-app error isolation                  |
-| [src/models.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/models.py)                 | Pydantic data schemas      | `with_structured_output` target types                          |
-| [src/prompts.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/prompts.py)               | LangChain prompt templates | `ChatPromptTemplate.from_messages` with persona system prompts |
-| [src/pipeline.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/pipeline.py)             | LCEL chains + retry        | `PROMPT \| llm.with_structured_output(Schema)`                 |
-| [src/monday_client.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/monday_client.py)   | GraphQL API client         | Dedup, create items/subitems, update subitems                  |
-| [src/csv_loader.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/csv_loader.py)         | CSV ingestion              | Field validation, type coercion                                |
-| [src/console_output.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/console_output.py) | Rich terminal display      | Color-coded panels, summary table                              |
-| [output/results.json](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/output/results.json)     | Pipeline output            | Full structured results for all 15 apps                        |
+| File | Purpose | Key Pattern |
+| :--- | :--- | :--- |
+| [main.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/main.py) | Orchestrates all 3 steps | Sequential execution, per-app error isolation |
+| [src/models.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/models.py) | Pydantic data schemas | `with_structured_output` target types |
+| [src/prompts.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/prompts.py) | LangChain prompt templates | `ChatPromptTemplate.from_messages` with persona system prompts |
+| [src/pipeline.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/pipeline.py) | LCEL chains + retry | `PROMPT \| llm.with_structured_output(Schema)` |
+| [src/monday_client.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/monday_client.py) | GraphQL API client | Dedup, create items/subitems, update subitems |
+| [src/csv_loader.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/csv_loader.py) | CSV ingestion | Field validation, type coercion |
+| [src/console_output.py](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/src/console_output.py) | Rich terminal display | Color-coded panels, summary table |
+| [output/results.json](file:///wsl.localhost/Ubuntu/home/harison/projects/monday/output/results.json) | Pipeline output | Full structured results for all 15 apps |
+
+---
+
+## 13. Langfuse Observability & Tracing
+
+The intake pipeline has been instrumented with **Langfuse** following industry-standard best practices in a minimal footprint. If `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` are provided in `.env`, tracing is fully active.
+
+### Key Observability Features
+
+1. **Native LangChain Integration**:
+   Uses the `CallbackHandler` from `langfuse.langchain` to seamlessly hook into LangChain's execution engine without adding invasive logging code to the pipelines.
+
+2. **Session Grouping (`session_id`)**:
+   Passes the `application_id` as the `langfuse_session_id` metadata parameter. This cleanly groups the sequential compliance and operations assessment runs for each client in the Langfuse Sessions dashboard:
+   ```python
+   # pipeline.py
+   run_config["metadata"].update({
+       "langfuse_session_id": app["application_id"]
+   })
+   ```
+
+3. **Descriptive Tracing Names**:
+   Uses explicit trace names (`Client Intake - Risk Assessment` and `Client Intake - Onboarding Summary`) instead of generic default step names.
+
+4. **Multi-Feature Tagging**:
+   Tags all LLM traces with system tags (`crestview`, `risk-assessment`, `onboarding-summary`), allowing operations teams to build filtered dashboards in the Langfuse console.
+
+5. **Graceful Pipeline Flushing**:
+   To prevent trace loss in CLI environments, the entry script invokes `get_client().shutdown()` at exit to block until all background worker threads have fully flushed their queues to Langfuse's cloud endpoints.
+

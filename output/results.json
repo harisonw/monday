@@ -2,76 +2,734 @@
   {
     "application_id": "APP-2026-0301",
     "client_name": "Greenfield State Pension Fund",
-    "error": "Pipeline failed for APP-2026-0301 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 19.695818887s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}"
+    "client_type": "Institutional",
+    "estimated_aum": 750000000,
+    "submission_date": "01/06/2026",
+    "due_date": "2026-01-13",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 15,
+      "compliance_flags": [],
+      "compliance_reasoning": "The client is a state-level institutional entity (pension fund) with a transparent ownership structure and a clear, verifiable mandate. The nature of the entity (government-affiliated) inherently lowers the risk of money laundering or illicit activity. The application includes all standard institutional documentation, including board resolutions and investment policy statements, which are consistent with regulatory requirements for institutional onboarding. The client has a pre-existing relationship with the firm, allowing for historical verification of their activities and reputation. No indicators of shell company activity, opaque ownership, or high-risk jurisdictional exposure were identified.",
+      "recommended_actions": [
+        "Verify the legal existence of the pension fund via official state government registry",
+        "Confirm the validity of the board resolution and authorized signatory list against internal records",
+        "Perform standard OFAC and sanctions screening on the entity and its board members",
+        "Proceed with standard institutional onboarding procedures"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Greenfield State Pension Fund is a government-affiliated institutional entity seeking to allocate $750M in assets. As a state-level pension fund, they possess a transparent ownership structure and a well-documented mandate. The firm has an existing relationship with the client through a prior sub-advisory arrangement, confirming their established reputation.",
+      "service_requirements": "The client requires management of domestic equity and investment-grade fixed income portfolios. Operational requirements include standard institutional account setup, adherence to their provided Investment Policy Statement (IPS), and integration of their board-approved signatory list.",
+      "complexity_rating": "Standard",
+      "estimated_onboarding_days": 10,
+      "key_considerations": [
+        "Client is a low-risk institutional entity with no compliance flags.",
+        "Existing relationship allows for streamlined verification of historical data.",
+        "Ensure all trades align strictly with the provided Investment Policy Statement."
+      ],
+      "next_steps": [
+        "Verify legal existence via official state government registry.",
+        "Validate board resolution and authorized signatory list against internal records.",
+        "Complete standard OFAC and sanctions screening for the entity and board members.",
+        "Finalize account opening documentation and internal system setup.",
+        "Coordinate with the investment team to confirm mandate alignment and initial funding logistics."
+      ],
+      "priority": "Medium"
+    },
+    "monday_item_id": "2948227292",
+    "monday_subitems": {
+      "risk_assessment_id": "2948213151",
+      "onboarding_summary_id": "2948227248"
+    }
   },
   {
     "application_id": "APP-2026-0302",
     "client_name": "Margaret and Theodore Ashworth",
-    "error": "Pipeline failed for APP-2026-0302 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 35.871921036s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+    "client_type": "High-Net-Worth Individual",
+    "estimated_aum": 28000000,
+    "submission_date": "01/07/2026",
+    "due_date": "2026-01-14",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 15,
+      "compliance_flags": [],
+      "compliance_reasoning": "The application for Margaret and Theodore Ashworth presents a low-risk profile. The clients are U.S.-based individuals with a clear, documented history of wealth accumulation through executive compensation, real estate, and inheritance. The source of funds is consistent with their professional backgrounds and age. There are no indicators of offshore activity, complex ownership structures, or political exposure. The referral by an existing client provides an additional layer of reputational vetting. The documentation provided is standard and sufficient for the requested services.",
+      "recommended_actions": [
+        "Perform standard OFAC and sanctions screening",
+        "Verify identity via independent government-issued documentation",
+        "Confirm source of funds through review of tax returns or brokerage statements",
+        "Finalize account opening in accordance with standard AML/KYC procedures"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Margaret and Theodore Ashworth are a retired, U.S.-based couple seeking wealth management services for their $28 million portfolio. Their wealth is derived from a transparent history of executive compensation, real estate transactions, and inheritance. They have been referred by an existing client, and their profile presents no complex ownership or offshore elements.",
+      "service_requirements": "The clients require discretionary portfolio management with an income-focused investment mandate and a moderate risk tolerance. No special operational requirements or complex trust structures were identified.",
+      "complexity_rating": "Standard",
+      "estimated_onboarding_days": 5,
+      "key_considerations": [
+        "Low-risk profile with no enhanced due diligence requirements.",
+        "Standard AML/KYC documentation is sufficient.",
+        "Ensure all account opening paperwork aligns with the discretionary mandate."
+      ],
+      "next_steps": [
+        "Perform standard OFAC and sanctions screening.",
+        "Verify identity using provided government-issued documentation.",
+        "Confirm source of funds via review of tax returns or brokerage statements.",
+        "Finalize account opening and internal system setup.",
+        "Coordinate with the relationship manager to confirm the discretionary mandate."
+      ],
+      "priority": "Medium"
+    },
+    "monday_item_id": "2948216169",
+    "monday_subitems": {
+      "risk_assessment_id": "2948216339",
+      "onboarding_summary_id": "2948218626"
+    }
   },
   {
     "application_id": "APP-2026-0303",
     "client_name": "Apex Global Holdings Ltd",
-    "error": "Pipeline failed for APP-2026-0303 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 49.085352689s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}"
+    "client_type": "Corporate",
+    "estimated_aum": 500000000,
+    "submission_date": "01/08/2026",
+    "due_date": "2026-01-15",
+    "risk_assessment": {
+      "risk_level": "High",
+      "risk_score": 95,
+      "compliance_flags": [
+        "Offshore Entity",
+        "Nominee Directors",
+        "Opaque Ownership Structure",
+        "Incomplete KYC",
+        "Thin Source-of-Funds Documentation",
+        "Pressure Tactics",
+        "Multi-Jurisdiction Complexity",
+        "Shell Company Indicators"
+      ],
+      "compliance_reasoning": "The application exhibits multiple high-risk indicators that suggest a potential for money laundering or illicit activity. The use of an offshore entity with a three-layer ownership structure across multiple jurisdictions is a classic indicator of layering designed to obscure beneficial ownership. The presence of nominee directors, combined with the client's refusal to provide transparent ownership details, prevents the firm from fulfilling its regulatory obligation to identify the Ultimate Beneficial Owner (UBO). Furthermore, the vague description of 'diversified business interests' without supporting documentation constitutes a critical failure in Source-of-Funds (SoF) verification. The client's use of pressure tactics to expedite processing while simultaneously resisting standard KYC requests is a significant red flag for potential evasion of AML controls.",
+      "recommended_actions": [
+        "Place application on immediate hold and escalate to the AML Compliance Committee",
+        "Issue a formal request for a certified register of members and UBO declaration",
+        "Conduct independent adverse media and jurisdictional risk screening on all identified intermediate entities",
+        "Require audited financial statements or bank statements to substantiate the $500M AUM source of funds",
+        "Perform a formal 'Know Your Business' (KYB) investigation to identify the true principals behind the nominee directors",
+        "File a Suspicious Activity Report (SAR) if the client continues to refuse documentation requests"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "Apex Global Holdings Ltd is an offshore corporate entity seeking a multi-asset management account with $500M in AUM. The client utilizes a complex, three-layer ownership structure across multiple jurisdictions, with management currently provided by nominee directors. The relationship is characterized by opaque beneficial ownership and a lack of transparency regarding the source of funds.",
+      "service_requirements": "The client requires a multi-asset management mandate. Due to the high-risk profile, no trading or account activation is permitted until full KYC/KYB and source-of-funds verification are completed to the satisfaction of the AML Compliance Committee.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 45,
+      "key_considerations": [
+        "Enhanced Due Diligence (EDD) is mandatory prior to any account activation.",
+        "The application is currently on hold pending AML Compliance Committee review.",
+        "Operations must not bypass standard documentation requirements despite client pressure for expedited processing.",
+        "High risk of potential money laundering; strict adherence to AML protocols is required."
+      ],
+      "next_steps": [
+        "Confirm the application is on hold and notify the AML Compliance Committee for formal escalation.",
+        "Issue a formal, final request to the client for a certified register of members, UBO declaration, and audited financial statements.",
+        "Coordinate with the compliance team to conduct independent adverse media and jurisdictional risk screening on all intermediate entities.",
+        "Perform a comprehensive KYB investigation to identify the true principals behind the nominee directors.",
+        "Prepare documentation for a potential Suspicious Activity Report (SAR) filing if the client fails to provide requested information."
+      ],
+      "priority": "Critical"
+    },
+    "monday_item_id": "2948215139",
+    "monday_subitems": {
+      "risk_assessment_id": "2948229262",
+      "onboarding_summary_id": "2948229304"
+    }
   },
   {
     "application_id": "APP-2026-0304",
     "client_name": "Pacific Northwest Teachers Retirement System",
-    "error": "Pipeline failed for APP-2026-0304 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 4.253922717s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '4s'}]}}"
+    "client_type": "Institutional",
+    "estimated_aum": 1200000000,
+    "submission_date": "01/09/2026",
+    "due_date": "2026-01-16",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 10,
+      "compliance_flags": [],
+      "compliance_reasoning": "The client is a public pension fund, which is a highly regulated institutional entity with transparent governance structures and public reporting requirements. The nature of the client (a retirement system) inherently mitigates money laundering risks. The application is complete, the source of funds is clearly derived from public pension contributions, and the transition of assets from a reputable competing firm provides a strong audit trail. The request for phased onboarding is a standard institutional practice for large-scale capital deployment and does not constitute suspicious pressure tactics.",
+      "recommended_actions": [
+        "Verify institutional status via official government registry",
+        "Perform standard OFAC and sanctions screening on the entity and its board members",
+        "Confirm the existence of the prior relationship with the competing firm via standard industry reference checks",
+        "Approve onboarding subject to standard institutional KYC protocols"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Pacific Northwest Teachers Retirement System is a public pension fund seeking to transition $1.2B in assets to our firm. As a highly regulated institutional entity, they possess transparent governance structures and a well-documented history of public reporting. The client is moving assets from a reputable competing firm, ensuring a clear audit trail for their capital.",
+      "service_requirements": "The client requires management of fixed income and real asset strategies. They have requested a phased onboarding approach, with an initial $400M deployment followed by the remaining $800M over a 6-month period. No specific ESG exclusions or complex trust structures were noted.",
+      "complexity_rating": "Standard",
+      "estimated_onboarding_days": 15,
+      "key_considerations": [
+        "Phased onboarding schedule requires coordination between the investment desk and operations for liquidity management.",
+        "Client is a low-risk institutional entity; standard KYC protocols apply.",
+        "Ensure all documentation reflects the transition of assets from the previous custodian."
+      ],
+      "next_steps": [
+        "Verify institutional status via official government registry.",
+        "Perform standard OFAC and sanctions screening on the entity and board members.",
+        "Confirm prior relationship with the competing firm via industry reference checks.",
+        "Finalize account opening documentation and internal system setup.",
+        "Coordinate with the relationship manager to confirm the $400M initial funding date."
+      ],
+      "priority": "High"
+    },
+    "monday_item_id": "2947786882",
+    "monday_subitems": {
+      "risk_assessment_id": "2947790093",
+      "onboarding_summary_id": "2947789926"
+    }
   },
   {
     "application_id": "APP-2026-0305",
     "client_name": "James Okafor",
-    "error": "Pipeline failed for APP-2026-0305 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 19.533368562s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}"
+    "client_type": "High-Net-Worth Individual",
+    "estimated_aum": 42000000,
+    "submission_date": "01/10/2026",
+    "due_date": "2026-01-16",
+    "risk_assessment": {
+      "risk_level": "Medium",
+      "risk_score": 55,
+      "compliance_flags": [
+        "Multi-Jurisdiction Complexity"
+      ],
+      "compliance_reasoning": "The client is a U.S. citizen with a transparent source of wealth (18-year career in a multinational energy firm). The risk is elevated to Medium primarily due to the proposed use of multiple complex trust structures (generation-skipping and irrevocable life insurance trusts) combined with the client's current international residency. While the client's profile is consistent with a high-net-worth individual, the combination of cross-border tax implications and the layering of trust entities requires additional oversight to ensure compliance with U.S. tax reporting (FATCA/FBAR) and anti-money laundering standards regarding beneficial ownership and control.",
+      "recommended_actions": [
+        "Verify U.S. citizenship and current tax residency status via passport and tax documentation",
+        "Obtain and review the full organizational chart for the proposed trust structures",
+        "Request documentation confirming the source of funds for the initial trust funding",
+        "Conduct a review of the trust deeds to ensure compliance with U.S. regulatory requirements for managed accounts",
+        "Confirm the identity and credentials of the estate planning attorney acting as the third-party coordinator"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "James Okafor is a high-net-worth U.S. citizen currently residing abroad due to a long-term assignment with a multinational energy firm. His wealth is derived from 18 years of executive compensation and stock options. He is seeking comprehensive wealth management and the establishment of complex estate planning vehicles, including a generation-skipping trust and two irrevocable life insurance trusts.",
+      "service_requirements": "The client requires wealth management services and the setup of multiple trust structures. Operational requirements include coordinating with his external estate planning attorney and ensuring all accounts are structured to accommodate cross-border tax reporting and specific trust-based investment mandates.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 25,
+      "key_considerations": [
+        "Enhanced due diligence is mandatory due to international residency and trust layering.",
+        "Strict adherence to FATCA/FBAR reporting requirements is required for all trust entities.",
+        "Coordination with the client's estate planning attorney is essential for document accuracy.",
+        "Verification of source of funds for initial trust funding is a prerequisite for account activation."
+      ],
+      "next_steps": [
+        "Obtain and verify U.S. citizenship and tax residency documentation.",
+        "Collect and review the full organizational chart for all proposed trust structures.",
+        "Request and validate source of funds documentation for the initial trust funding.",
+        "Review all trust deeds for compliance with U.S. regulatory standards.",
+        "Verify the credentials of the client's estate planning attorney and establish a formal communication channel.",
+        "Initiate account opening process once all compliance prerequisites are cleared."
+      ],
+      "priority": "High"
+    },
+    "monday_item_id": "2947802206",
+    "monday_subitems": {
+      "risk_assessment_id": "2947787039",
+      "onboarding_summary_id": "2947800827"
+    }
   },
   {
     "application_id": "APP-2026-0306",
     "client_name": "Brightpath University Endowment",
-    "error": "Pipeline failed for APP-2026-0306 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 34.654036403s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '34s'}]}}"
+    "client_type": "Institutional",
+    "estimated_aum": 320000000,
+    "submission_date": "01/10/2026",
+    "due_date": "2026-01-16",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 15,
+      "compliance_flags": [
+        "Pressure Tactics"
+      ],
+      "compliance_reasoning": "The client is a university endowment, which is generally considered a low-risk institutional entity with a transparent, public-facing governance structure. The $320M AUM is consistent with institutional endowment profiles. The 'Pressure Tactics' flag is triggered by the request to begin onboarding in parallel with the pending board resolution to meet a Q2 deadline; however, this is common in institutional finance to align with fiscal cycles and does not indicate illicit activity. The ESG requirements are standard for institutional mandates and do not pose a compliance risk. The risk score is low, reflecting the institutional nature of the client, though the pending documentation requires verification before final account activation.",
+      "recommended_actions": [
+        "Verify the legal existence and tax-exempt status of the university endowment via official government databases",
+        "Obtain and verify the final signed board resolution authorizing the investment and the designated signatories",
+        "Perform standard institutional KYC/AML screening on the university board members and investment committee",
+        "Confirm the source of funds is consistent with university endowment operations (e.g., donations, tuition, investment returns)"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Brightpath University Endowment is a large institutional client seeking to manage $320M in assets across equity and alternative strategies. As a university endowment, the entity operates with a transparent governance structure and standard institutional funding sources. The relationship is driven by the university's fiscal cycle and long-term investment objectives.",
+      "service_requirements": "The client requires a multi-asset mandate covering domestic equity, international equity, and hedge fund allocations. Operational requirements include strict adherence to ESG exclusions regarding fossil fuels, private prisons, and tobacco. The client has requested parallel processing of onboarding tasks to meet a Q2 funding deadline.",
+      "complexity_rating": "Moderate",
+      "estimated_onboarding_days": 15,
+      "key_considerations": [
+        "ESG mandate requires specific portfolio tagging and monitoring protocols",
+        "Account activation is strictly contingent upon receipt of the final signed board resolution",
+        "Parallel processing is permitted, but no capital deployment can occur until all KYC/AML documentation is finalized"
+      ],
+      "next_steps": [
+        "Verify legal existence and tax-exempt status via official government databases",
+        "Perform standard institutional KYC/AML screening on university board members and investment committee",
+        "Obtain and verify the final signed board resolution and authorized signatory list",
+        "Configure ESG exclusion filters in the portfolio management system",
+        "Finalize account opening documentation and internal mandate setup"
+      ],
+      "priority": "Medium"
+    },
+    "monday_item_id": "2947801035",
+    "monday_subitems": {
+      "risk_assessment_id": "2947800955",
+      "onboarding_summary_id": "2947804486"
+    }
   },
   {
     "application_id": "APP-2026-0307",
     "client_name": "Velocity Venture Partners LLC",
-    "error": "Pipeline failed for APP-2026-0307 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 48.927203803s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '48s'}]}}"
+    "client_type": "Corporate",
+    "estimated_aum": 85000000,
+    "submission_date": "01/12/2026",
+    "due_date": "2026-01-19",
+    "risk_assessment": {
+      "risk_level": "High",
+      "risk_score": 85,
+      "compliance_flags": [
+        "PEP",
+        "Incomplete KYC",
+        "Multi-Jurisdiction Complexity"
+      ],
+      "compliance_reasoning": "The application presents significant risk due to the General Partner's status as a former senior government official, triggering PEP protocols. While the individual left office 14 months ago, they remain within the high-risk window for potential influence. The application is currently incomplete, lacking essential fund formation documents and a comprehensive list of limited partners, which prevents a full assessment of the beneficial ownership structure. Furthermore, the multi-jurisdictional nature of the limited partners increases the complexity of AML/CTF screening and necessitates a robust review of the fund's investor base to ensure compliance with international sanctions and anti-money laundering regulations.",
+      "recommended_actions": [
+        "Conduct comprehensive PEP screening and adverse media search on the General Partner",
+        "Request certified copies of fund formation documents and the full register of limited partners",
+        "Perform risk-based screening of all identified limited partners against global sanctions and watchlists",
+        "Obtain written confirmation of the source of funds for the $85M capital commitment",
+        "Escalate to the AML Compliance Committee for final approval"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "Velocity Venture Partners LLC is a venture capital firm seeking to invest $85M in alternative investment strategies. The firm is led by a General Partner who is a former senior government official, necessitating heightened scrutiny. The client structure involves a multi-jurisdictional base of limited partners, requiring a thorough review of the fund's ownership and capital sources.",
+      "service_requirements": "The client requires access to alternative investment strategies. Operational requirements include a full review of fund formation documents, verification of the limited partner register, and strict adherence to AML/CTF protocols due to the PEP status and international investor base.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 30,
+      "key_considerations": [
+        "Enhanced due diligence (EDD) is mandatory prior to any account activation.",
+        "PEP status of the General Partner requires ongoing monitoring and AML Committee oversight.",
+        "Multi-jurisdictional investor base necessitates comprehensive sanctions screening for all limited partners.",
+        "Account setup is contingent upon receipt of certified fund formation documents and full LP register."
+      ],
+      "next_steps": [
+        "Coordinate with Compliance to finalize PEP screening and adverse media search on the General Partner.",
+        "Formally request certified fund formation documents and the complete register of limited partners from the client.",
+        "Perform risk-based sanctions and watchlist screening on all identified limited partners.",
+        "Obtain and verify written documentation confirming the source of funds for the $85M commitment.",
+        "Submit the complete onboarding file to the AML Compliance Committee for final approval.",
+        "Proceed with internal account setup and system configuration only after formal AML Committee sign-off."
+      ],
+      "priority": "Critical"
+    },
+    "monday_item_id": "2947790144",
+    "monday_subitems": {
+      "risk_assessment_id": "2947799098",
+      "onboarding_summary_id": "2947804514"
+    }
   },
   {
     "application_id": "APP-2026-0308",
     "client_name": "Linda Vasquez",
-    "error": "Pipeline failed for APP-2026-0308 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 3.915191678s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '3s'}]}}"
+    "client_type": "High-Net-Worth Individual",
+    "estimated_aum": 9500000,
+    "submission_date": "01/13/2026",
+    "due_date": "2026-01-20",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 15,
+      "compliance_flags": [],
+      "compliance_reasoning": "The client is a High-Net-Worth Individual seeking standard wealth management services. The source of funds is clearly identified as a divorce settlement, which is a common and legitimate source of wealth. The application is complete, there are no indicators of offshore structures, PEP status, or complex ownership, and the client is not exhibiting any pressure tactics. The risk profile is consistent with a standard retail onboarding process.",
+      "recommended_actions": [
+        "Verify the divorce settlement agreement to confirm the source of funds",
+        "Perform standard AML/Sanctions screening",
+        "Complete standard identity verification (CIP)"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Linda Vasquez is a High-Net-Worth Individual referred through our San Francisco branch. Her assets originate from a recent divorce settlement, and she is seeking conservative wealth management services focused on capital preservation.",
+      "service_requirements": "Standard wealth management services with a conservative investment mandate. No special operational requirements or complex trust structures identified.",
+      "complexity_rating": "Standard",
+      "estimated_onboarding_days": 5,
+      "key_considerations": [
+        "Source of funds is verified as a divorce settlement",
+        "No enhanced due diligence required",
+        "Standard retail onboarding workflow applies"
+      ],
+      "next_steps": [
+        "Perform standard AML and Sanctions screening",
+        "Complete Customer Identification Program (CIP) verification",
+        "Collect and verify the divorce settlement agreement documentation",
+        "Finalize account opening and internal system setup"
+      ],
+      "priority": "Low"
+    },
+    "monday_item_id": "2947815248",
+    "monday_subitems": {
+      "risk_assessment_id": "2947796542",
+      "onboarding_summary_id": "2947790983"
+    }
   },
   {
     "application_id": "APP-2026-0309",
     "client_name": "Northern Lights Sovereign Wealth Fund",
-    "error": "Pipeline failed for APP-2026-0309 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 19.477221108s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '19s'}]}}"
+    "client_type": "Institutional",
+    "estimated_aum": 2000000000,
+    "submission_date": "01/14/2026",
+    "due_date": "2026-01-21",
+    "risk_assessment": {
+      "risk_level": "Medium",
+      "risk_score": 45,
+      "compliance_flags": [
+        "Pressure Tactics"
+      ],
+      "compliance_reasoning": "The client is a sovereign wealth fund, which typically carries a lower inherent risk profile due to the nature of the entity and its regulatory oversight. However, the request for a 'dedicated onboarding team' and 'weekly status calls' constitutes a form of pressure tactic to expedite the onboarding process for a $2B AUM account. While the client's request for reciprocal KYC is standard for institutional entities of this size, the combination of high-value AUM and the demand for expedited, high-touch service requires a moderate risk rating to ensure that the speed of onboarding does not compromise the rigor of the AML/KYC verification process.",
+      "recommended_actions": [
+        "Perform standard institutional KYC verification including verification of legal existence and government status",
+        "Conduct screening of the fund's board members and key decision-makers against global sanctions and PEP lists",
+        "Review the fund's constitutional documents to confirm the authority of the signatories",
+        "Establish a clear communication protocol to manage expectations regarding the onboarding timeline without compromising compliance standards",
+        "Document the rationale for the expedited onboarding process in the client file for audit purposes"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "Northern Lights Sovereign Wealth Fund is a large institutional entity seeking to allocate $2B across global equity, fixed income, and real asset strategies. As a sovereign wealth fund, they are a high-profile client with significant AUM, requiring a high-touch service model. The relationship is characterized by a request for reciprocal KYC and a demand for expedited onboarding timelines.",
+      "service_requirements": "The client requires multi-asset management services. Operational requirements include a dedicated onboarding team, weekly status calls, and a reciprocal due diligence process where the client reviews our firm's compliance practices.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 30,
+      "key_considerations": [
+        "Enhanced due diligence is mandatory despite the institutional nature of the client.",
+        "Pressure tactics regarding onboarding speed must be managed through clear communication protocols.",
+        "Reciprocal KYC requests require coordination with the Legal and Compliance departments.",
+        "All communications regarding the timeline must be documented for audit purposes."
+      ],
+      "next_steps": [
+        "Complete standard institutional KYC and verify government status/legal existence.",
+        "Perform comprehensive sanctions and PEP screening on all board members and key decision-makers.",
+        "Review and validate constitutional documents to confirm signatory authority.",
+        "Establish a formal communication protocol and schedule the first status call to manage expectations.",
+        "Coordinate with the Compliance team to provide the requested firm documentation for the client's reciprocal KYC review.",
+        "Assign a dedicated onboarding lead to manage the weekly status calls and internal coordination."
+      ],
+      "priority": "Critical"
+    },
+    "monday_item_id": "2947811146",
+    "monday_subitems": {
+      "risk_assessment_id": "2947815012",
+      "onboarding_summary_id": "2947814633"
+    }
   },
   {
     "application_id": "APP-2026-0310",
     "client_name": "Heritage Family Office",
-    "error": "Pipeline failed for APP-2026-0310 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 35.167201991s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}"
+    "client_type": "Family Office",
+    "estimated_aum": 175000000,
+    "submission_date": "01/15/2026",
+    "due_date": "2026-01-22",
+    "risk_assessment": {
+      "risk_level": "Medium",
+      "risk_score": 55,
+      "compliance_flags": [
+        "Multi-Jurisdiction Complexity",
+        "Opaque Ownership Structure"
+      ],
+      "compliance_reasoning": "The client presents a medium risk profile primarily due to the structural complexity inherent in managing 22 separate accounts across trusts, LLCs, and a foundation. While the client is a family office, the multi-generational nature and the distribution of assets across various legal vehicles create an Opaque Ownership Structure that requires significant effort to map beneficial ownership and control. The Multi-Jurisdiction Complexity flag is triggered by the need to coordinate with multiple external advisors and the potential for cross-border asset holding, which necessitates a thorough review of tax and regulatory compliance for each entity. The risk is mitigated by the clear, legitimate business purpose of wealth management and the transition from a previous institutional relationship, but the sheer volume of entities requires rigorous verification to ensure no shell company indicators are present.",
+      "recommended_actions": [
+        "Obtain and verify organizational charts for all 22 entities",
+        "Collect certified beneficial ownership documentation for all trusts and LLCs",
+        "Perform a comprehensive review of the Trust Deeds and Articles of Incorporation for each entity",
+        "Verify the credentials and regulatory standing of the three external advisors",
+        "Conduct a formal Source-of-Wealth (SoW) analysis for the primary family patriarch/matriarch"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "Heritage Family Office is a multi-generational entity managing $175M in assets for 14 family members. The structure involves a complex network of trusts, LLCs, and a family foundation, necessitating consolidated reporting and coordination with multiple external professional advisors.",
+      "service_requirements": "The client requires comprehensive wealth management, including consolidated reporting, tax-lot accounting, and integration with external tax, estate, and insurance advisors. Onboarding involves the setup and maintenance of 22 distinct accounts across various legal vehicles.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 45,
+      "key_considerations": [
+        "Enhanced due diligence is mandatory due to the opaque ownership structure and multi-jurisdictional nature of the entities.",
+        "Operations must ensure all 22 accounts are mapped correctly to their respective beneficial owners.",
+        "Coordination with external advisors requires strict adherence to data privacy and authorization protocols."
+      ],
+      "next_steps": [
+        "Collect and verify organizational charts and certified beneficial ownership documentation for all 22 entities.",
+        "Conduct a formal Source-of-Wealth analysis for the primary family patriarch/matriarch.",
+        "Perform a comprehensive review of all Trust Deeds and Articles of Incorporation.",
+        "Verify the credentials and regulatory standing of the three external advisors.",
+        "Initiate the account opening process for the 22 entities once compliance clearance is granted.",
+        "Establish the consolidated reporting framework and data feeds for external advisor coordination."
+      ],
+      "priority": "High"
+    },
+    "monday_item_id": "2947814254",
+    "monday_subitems": {
+      "risk_assessment_id": "2947808465",
+      "onboarding_summary_id": "2947817531"
+    }
   },
   {
     "application_id": "APP-2026-0311",
     "client_name": "Eastbridge Trading Group Ltd",
-    "error": "Pipeline failed for APP-2026-0311 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 49.678244701s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '49s'}]}}"
+    "client_type": "Corporate",
+    "estimated_aum": 45000000,
+    "submission_date": "01/16/2026",
+    "due_date": "2026-01-23",
+    "risk_assessment": {
+      "risk_level": "High",
+      "risk_score": 88,
+      "compliance_flags": [
+        "Recently Incorporated Entity",
+        "Thin Source-of-Funds Documentation",
+        "Pressure Tactics",
+        "Opaque Ownership Structure"
+      ],
+      "compliance_reasoning": "The application presents multiple high-risk indicators. The entity is recently incorporated (8 months), lacking a track record to substantiate $45M in capital. The 'trading profits' source of funds is unsubstantiated by audited financials or bank statements, creating a significant AML risk regarding the legitimacy of the capital. The client's use of pressure tactics to bypass standard onboarding protocols is a classic red flag for potential illicit activity or attempts to circumvent regulatory scrutiny. The concentration of control in a single director/beneficial owner without independent oversight further increases the risk of self-dealing or misuse of the corporate vehicle.",
+      "recommended_actions": [
+        "Issue a formal request for audited financial statements and bank statements covering the last 12 months",
+        "Conduct independent verification of the beneficial owner's background and source of wealth",
+        "Perform a negative news search on the entity and the sole director",
+        "Require a formal letter of explanation regarding the origin of the $45M capital",
+        "Suspend onboarding until all requested documentation is received and verified",
+        "Escalate to the AML Compliance Committee for final approval"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "Eastbridge Trading Group Ltd is a recently incorporated corporate entity seeking to invest $45M in short-duration fixed income. The firm has only 8 months of operating history and is controlled by a single beneficial owner who also serves as the sole director. The source of wealth is currently unsubstantiated, and the client has demonstrated significant resistance to standard documentation protocols.",
+      "service_requirements": "The client requires a fixed income management mandate for cash management purposes. No special ESG or trust structures are requested, but the onboarding must be strictly controlled due to the high-risk profile and lack of financial transparency.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 45,
+      "key_considerations": [
+        "Enhanced Due Diligence (EDD) is mandatory prior to any account activation.",
+        "The client's use of pressure tactics is a red flag; maintain strict adherence to all compliance protocols regardless of client frustration.",
+        "The lack of audited financials for a $45M investment is a critical AML concern.",
+        "Onboarding is currently suspended pending AML Compliance Committee review."
+      ],
+      "next_steps": [
+        "Await formal clearance from the AML Compliance Committee before proceeding with any operational setup.",
+        "Issue a formal request to the client for audited financial statements and bank statements covering the last 12 months.",
+        "Obtain a formal, signed letter of explanation detailing the origin of the $45M capital.",
+        "Complete independent verification of the beneficial owner's background and perform a comprehensive negative news search.",
+        "Once compliance clearance is granted, initiate internal account structure setup and KYC documentation filing."
+      ],
+      "priority": "Critical"
+    },
+    "monday_item_id": "2947808165",
+    "monday_subitems": {
+      "risk_assessment_id": "2947807359",
+      "onboarding_summary_id": "2947822449"
+    }
   },
   {
     "application_id": "APP-2026-0312",
     "client_name": "Midwest Municipal Workers Union",
-    "error": "Pipeline failed for APP-2026-0312 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 2.393512964s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.5-flash-lite', 'location': 'global'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '2s'}]}}"
+    "client_type": "Institutional",
+    "estimated_aum": 180000000,
+    "submission_date": "01/17/2026",
+    "due_date": "2026-01-23",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 15,
+      "compliance_flags": [],
+      "compliance_reasoning": "The client is a well-established, transparent institutional entity (a municipal workers union) with a clear, verifiable purpose and a large, public membership base. The requested services (conservative fixed income management) align with the entity's stated investment policy. The documentation provided is comprehensive, including the trust agreement and board resolution, which mitigates risks related to ownership and authorization. There are no indicators of offshore activity, PEP involvement, or complex ownership structures. The transition from a retiring manager is a standard industry practice and does not present a red flag.",
+      "recommended_actions": [
+        "Verify the existence and registration of the union through the Department of Labor or relevant state regulatory body",
+        "Perform standard OFAC and sanctions screening on the entity and its board members",
+        "Confirm the legitimacy of the retiring investment manager to validate the asset transition",
+        "Proceed with standard institutional onboarding procedures"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Midwest Municipal Workers Union is a large institutional pension fund representing 12,000 members. They are seeking to transition $180M in assets from a retiring manager to our firm. The entity is well-established with a transparent structure and clear, verifiable governance documentation.",
+      "service_requirements": "The client requires conservative fixed income management. Operational requirements include strict adherence to an investment policy statement that mandates investment-grade securities only and prohibits the use of derivatives.",
+      "complexity_rating": "Standard",
+      "estimated_onboarding_days": 10,
+      "key_considerations": [
+        "Standard institutional onboarding process applies",
+        "No enhanced due diligence required",
+        "Strict adherence to investment policy mandate (no derivatives)",
+        "Asset transition coordination required with outgoing manager"
+      ],
+      "next_steps": [
+        "Verify union registration via Department of Labor or state regulatory body",
+        "Execute standard OFAC and sanctions screening for the entity and board members",
+        "Validate the legitimacy of the outgoing investment manager",
+        "Finalize account opening documentation and internal system setup",
+        "Coordinate asset transfer logistics with the retiring manager"
+      ],
+      "priority": "Medium"
+    },
+    "monday_item_id": "2947821367",
+    "monday_subitems": {
+      "risk_assessment_id": "2947820976",
+      "onboarding_summary_id": "2947819003"
+    }
   },
   {
     "application_id": "APP-2026-0313",
     "client_name": "Robert and Diane Mercer-Hastings",
-    "error": "Pipeline failed for APP-2026-0313 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 17.350930937s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '17s'}]}}"
+    "client_type": "High-Net-Worth Individual",
+    "estimated_aum": 67000000,
+    "submission_date": "01/18/2026",
+    "due_date": "2026-01-23",
+    "risk_assessment": {
+      "risk_level": "Medium",
+      "risk_score": 45,
+      "compliance_flags": [
+        "Concentrated Stock / Insider Trading Risk"
+      ],
+      "compliance_reasoning": "The client presents a medium risk profile primarily due to the significant concentration of assets ($40M) in a single publicly traded security linked to the client's role as CEO. While the client's professional background (CEO and Law Partner) provides a clear and verifiable source of wealth, the concentrated position necessitates strict adherence to SEC Rule 10b5-1 and insider trading regulations. The risk is mitigated by the client's proactive disclosure of the 10b5-1 plan and the requirement for coordination with corporate counsel, which demonstrates a commitment to regulatory compliance. No indicators of shell companies, offshore entities, or opaque ownership were identified.",
+      "recommended_actions": [
+        "Verify the existence and terms of the 10b5-1 trading plan with the client's corporate counsel.",
+        "Obtain written confirmation of the client's status as an insider and any applicable blackout periods.",
+        "Perform standard AML/KYC identity verification for both individuals.",
+        "Document the source of wealth for the non-stock assets (real estate and cash) to ensure consistency with professional earnings.",
+        "Establish a formal communication protocol with the client's legal counsel regarding future trades."
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "Robert and Diane Mercer-Hastings are high-net-worth individuals with a combined professional background as a public company CEO and a law firm partner. Their wealth is primarily derived from executive compensation and legal practice, with a significant portion currently held in a concentrated position of employer stock. The relationship involves complex estate planning needs and the management of a diversified real estate portfolio.",
+      "service_requirements": "The clients require comprehensive wealth management and estate planning services. Key operational requirements include the management of a $40M concentrated stock position, the implementation of a 10b5-1 trading plan, and ongoing coordination with the clients' corporate counsel regarding trading window restrictions and insider trading compliance.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 20,
+      "key_considerations": [
+        "Enhanced due diligence required due to insider status and concentrated stock position.",
+        "Strict adherence to SEC Rule 10b5-1 protocols is mandatory for all trading activity.",
+        "Operational workflows must include a formal communication channel with the clients' corporate counsel.",
+        "Account activation is contingent upon verification of the 10b5-1 plan and blackout period documentation."
+      ],
+      "next_steps": [
+        "Obtain and verify the 10b5-1 trading plan documentation from the clients' corporate counsel.",
+        "Secure written confirmation of insider status and current blackout period schedules.",
+        "Complete standard AML/KYC identity verification for both Robert and Diane Mercer-Hastings.",
+        "Document and validate the source of wealth for non-stock assets, including real estate and cash holdings.",
+        "Establish and document the formal communication protocol with the clients' legal team for trade execution.",
+        "Finalize account setup and internal trading restrictions based on verified corporate counsel input."
+      ],
+      "priority": "High"
+    },
+    "monday_item_id": "2947819040",
+    "monday_subitems": {
+      "risk_assessment_id": "2947818427",
+      "onboarding_summary_id": "2947819239"
+    }
   },
   {
     "application_id": "APP-2026-0314",
     "client_name": "Global Impact Partners Foundation",
-    "error": "Pipeline failed for APP-2026-0314 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 33.878886166s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '33s'}]}}"
+    "client_type": "Institutional",
+    "estimated_aum": 95000000,
+    "submission_date": "01/19/2026",
+    "due_date": "2026-01-26",
+    "risk_assessment": {
+      "risk_level": "Low",
+      "risk_score": 15,
+      "compliance_flags": [],
+      "compliance_reasoning": "The client is a private foundation, which is a standard institutional entity type. The stated purpose of the funds (impact investing) is consistent with the entity's profile. While the client is evaluating multiple firms, this is standard institutional procurement behavior and does not constitute 'Pressure Tactics' in a regulatory context, as there is no evidence of attempts to bypass standard AML/KYC protocols. The entity is not a PEP, does not utilize offshore structures, and the source of funds is expected to be institutional capital. The risk is low as the client profile is transparent and the business activity is well-defined.",
+      "recommended_actions": [
+        "Perform standard institutional KYC verification including Articles of Incorporation and Board Resolution",
+        "Verify the foundation's tax-exempt status and registration with relevant regulatory bodies",
+        "Conduct standard OFAC and global sanctions screening on the entity and its board members",
+        "Obtain and verify the identity of all controlling persons and authorized signatories"
+      ],
+      "requires_enhanced_due_diligence": false
+    },
+    "onboarding_summary": {
+      "client_overview": "Global Impact Partners Foundation is a private institutional entity focused on climate and social justice initiatives. The foundation is seeking to allocate $95M into impact investment strategies, with capital sourced from institutional endowments. The relationship is straightforward, with no identified compliance flags or complex ownership structures.",
+      "service_requirements": "The client requires an impact investment mandate with specific ESG exclusions. Operationally, they mandate quarterly narrative reporting aligned with UN Sustainable Development Goals in addition to standard financial performance reporting.",
+      "complexity_rating": "Standard",
+      "estimated_onboarding_days": 10,
+      "key_considerations": [
+        "Client is evaluating multiple firms; speed and reporting accuracy are critical to winning the mandate.",
+        "Ensure reporting team is aligned on the specific UN SDG metrics required for quarterly deliverables.",
+        "No enhanced due diligence required; proceed with standard institutional onboarding protocols."
+      ],
+      "next_steps": [
+        "Perform standard institutional KYC verification including Articles of Incorporation and Board Resolution.",
+        "Verify the foundation's tax-exempt status and registration with relevant regulatory bodies.",
+        "Conduct standard OFAC and global sanctions screening on the entity and its board members.",
+        "Obtain and verify the identity of all controlling persons and authorized signatories.",
+        "Coordinate with the reporting team to confirm capability to meet the client's specific UN SDG narrative reporting requirements."
+      ],
+      "priority": "Medium"
+    },
+    "monday_item_id": "2947821492",
+    "monday_subitems": {
+      "risk_assessment_id": "2947824191",
+      "onboarding_summary_id": "2947807686"
+    }
   },
   {
     "application_id": "APP-2026-0315",
     "client_name": "R. Ashford (via Introducer)",
-    "error": "Pipeline failed for APP-2026-0315 after 3 attempts: Error calling model 'gemini-2.5-flash-lite' (RESOURCE_EXHAUSTED): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash-lite\\nPlease retry in 47.712148784s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash-lite'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '47s'}]}}"
+    "client_type": "High-Net-Worth Individual",
+    "estimated_aum": 120000000,
+    "submission_date": "01/20/2026",
+    "due_date": "2026-01-27",
+    "risk_assessment": {
+      "risk_level": "High",
+      "risk_score": 92,
+      "compliance_flags": [
+        "Third-Party Introducer",
+        "Offshore Entity",
+        "Incomplete KYC",
+        "Thin Source-of-Funds Documentation",
+        "Pressure Tactics",
+        "Declined Due Diligence"
+      ],
+      "compliance_reasoning": "The application presents multiple critical red flags indicative of potential money laundering or illicit activity. The use of an unaffiliated third-party introducer creates a lack of direct oversight. The request to hold $120M in an offshore trust, combined with the refusal to provide supporting documentation for the source of wealth, obscures the beneficial ownership and the legitimacy of funds. Furthermore, the client's refusal to engage in a standard introductory call and the insistence on routing all communications through an intermediary are classic indicators of an attempt to avoid direct scrutiny and maintain anonymity, which is inconsistent with standard high-net-worth wealth management practices.",
+      "recommended_actions": [
+        "Conduct comprehensive adverse media and PEP screening on the client and the third-party introducer",
+        "Issue a formal request for certified trust documentation and detailed source-of-wealth/source-of-funds evidence",
+        "Mandate a direct video-conference KYC interview with the beneficial owner as a non-negotiable condition for onboarding",
+        "Perform a risk assessment on the third-party introducer to determine their regulatory status and relationship to the client",
+        "Escalate to the AML Compliance Committee for a formal review before proceeding with any further interaction"
+      ],
+      "requires_enhanced_due_diligence": true
+    },
+    "onboarding_summary": {
+      "client_overview": "R. Ashford is a high-net-worth individual seeking to onboard $120M in assets via an offshore trust structure. The client was introduced by an unaffiliated third party and has demonstrated significant resistance to standard transparency protocols, including refusing direct communication with the firm.",
+      "service_requirements": "The client is requesting wealth management services for an offshore trust entity. Operational requirements include strict adherence to enhanced due diligence (EDD) protocols and verification of the trust structure and source of wealth before any account setup can proceed.",
+      "complexity_rating": "Complex",
+      "estimated_onboarding_days": 45,
+      "key_considerations": [
+        "Enhanced Due Diligence (EDD) is mandatory prior to any account activation.",
+        "The client's refusal of direct contact is a critical red flag that must be resolved via a mandatory video-conference KYC interview.",
+        "All source-of-wealth documentation must be independently verified and certified.",
+        "The third-party introducer must undergo a formal risk assessment before the firm can proceed."
+      ],
+      "next_steps": [
+        "Escalate the application to the AML Compliance Committee for formal review.",
+        "Conduct comprehensive adverse media and PEP screening on both the client and the third-party introducer.",
+        "Issue a formal request to the client for certified trust documentation and detailed source-of-wealth evidence.",
+        "Perform a regulatory risk assessment on the third-party introducer.",
+        "Schedule and conduct a mandatory video-conference KYC interview with the beneficial owner.",
+        "Await final AML Compliance Committee approval before initiating any account setup procedures."
+      ],
+      "priority": "Critical"
+    },
+    "monday_item_id": "2947808975",
+    "monday_subitems": {
+      "risk_assessment_id": "2947823618",
+      "onboarding_summary_id": "2947831875"
+    }
   }
 ]

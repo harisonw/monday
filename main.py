@@ -45,6 +45,16 @@ MONDAY_URL     = os.environ.get("MONDAY_API_URL", "https://api.monday.com/v2")
 CSV_PATH    = Path("crestview_client_applications.csv")
 OUTPUT_PATH = Path("output/results.json")
 
+# Initialize Langfuse tracing handler if keys are present in .env
+langfuse_handler = None
+if os.environ.get("LANGFUSE_PUBLIC_KEY") and os.environ.get("LANGFUSE_SECRET_KEY"):
+    try:
+        from langfuse.langchain import CallbackHandler
+        langfuse_handler = CallbackHandler()
+        console.print("[green]Langfuse tracing handler initialized successfully.[/green]")
+    except Exception as e:
+        console.print(f"[yellow]Could not initialize Langfuse handler: {e}[/yellow]")
+
 
 def _format_risk_notes(risk) -> str:
     """Format RiskAssessment as a readable Notes string for the monday.com subitem."""
@@ -200,7 +210,11 @@ def main():
 
         try:
             # Stage 1 & 2: LLM pipeline
-            risk, summary = process_application(llm, app)
+            risk, summary = process_application(
+                llm, 
+                app, 
+                callbacks=[langfuse_handler] if langfuse_handler else None
+            )
 
             # Update "Risk Assessment" subitem
             risk_id = app["_subitems"].get("Risk Assessment")
@@ -268,6 +282,17 @@ def main():
 
     # Final summary table
     print_summary_table(all_results)
+
+    # Flush Langfuse traces if tracing was enabled
+    if langfuse_handler:
+        console.print("Flushing Langfuse traces...")
+        try:
+            from langfuse import get_client
+            get_client().shutdown()
+            console.print("[green]Langfuse traces flushed successfully.[/green]")
+        except Exception as e:
+            console.print(f"[yellow]Failed to flush Langfuse: {e}[/yellow]")
+
     console.print("Done.\n")
 
 
