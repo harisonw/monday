@@ -38,11 +38,11 @@
 
 - [x] **2.4 Incorporate monday.com Integration:** Build out a trial monday.com board containing columns for Risk Level, Reasoning, and Summary. Map your AI pipeline's JSON output directly to this board using the monday.com GraphQL API or Model Context Protocol (MCP).
 
-- [ ] **2.5 Run End-to-End Test:** Process the 15 applications and verify the output is stable, explainable, sequentially consistent, and presentation-ready.
+- [x] **2.5 Run End-to-End Test:** Process the 15 applications and verify the output is stable, explainable, sequentially consistent, and presentation-ready.
 
 ### Phase 3: Craft the Strategic Proposal (Estimated Time: 1.5 Hours)
 
-- [ ] **3.1 Structure the Slide Deck:** Prepare highly scannable, executive-ready slides covering the requested 4 pillars:
+- [x] **3.1 Structure the Slide Deck:** Prepare highly scannable, executive-ready slides covering the requested 4 pillars:
 
 1.  **Business Case:** Link operational bottlenecks directly to the $12M revenue-at-risk metric and the lost $200M allocation.
 
@@ -57,7 +57,7 @@
 
 ### Phase 4: Document AI Usage & Rehearse (Estimated Time: 45 Mins)
 
-- [ ] **4.1 Log AI Meta-Process:** Compile structured notes detailing how you utilized external AI assistants to write code, refine prompts, or build the architecture. Document explicit examples of prompt iterations, failures, and human course-corrections so you can explain how you evaluated output quality.
+- [x] **4.1 Log AI Meta-Process:** Compile structured notes detailing how you utilized external AI assistants to write code, refine prompts, or build the architecture. Document explicit examples of prompt iterations, failures, and human course-corrections so you can explain how you evaluated output quality. See [docs/ai-meta-process.md](docs/ai-meta-process.md).
 
 - [ ] **4.2 Rehearse the Delivery:** Dry-run the 15–20 minute strategic pitch followed immediately by a slick 10–12 minute live code execution. Be ready to handle live code tweaks, architecture trade-off discussions, or edge-case questions from the panel.
 - [ ] **4.3 Final Readiness Check:** Confirm the deck, demo, and supporting notes are aligned before presenting.
