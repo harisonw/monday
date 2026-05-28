@@ -27,16 +27,17 @@
 
 ### Phase 2: Build the Technical POC (Estimated Time: 2 Hours)
 
-- [ ] **2.1 Setup Project & Pipeline:** Create a Python or Node.js application to read the client application CSV.
+- [x] **2.1 Setup Project & Pipeline:** Create a Python or Node.js application to read the client application CSV.
 
-- [ ] **2.2 Engineer the AI Prompting Layer:** Integrate an LLM provider (e.g., Gemini, OpenAI, or Anthropic). Write strict prompt templates instructing the LLM to output structured data (ideally JSON) containing:
+- [x] **2.2 Engineer the AI Prompting Layer:** Integrate an LLM provider (e.g., Gemini, OpenAI, or Anthropic). Write strict prompt templates instructing the LLM to output structured data (ideally JSON) containing:
   - `risk_level` (Low, Medium, High).
   - `compliance_reasoning` (explicit, defensible audit trails addressing Priya's needs).
   - `onboarding_summary` (actionable, operational summary for David's team).
 
-- [ ] **2.3 Establish Sequential Dependency:** Ensure the execution pipeline is sequential, meaning the risk assessment context actively feeds into and dictates the final onboarding summary. Include clean try/catch exception handling.
+- [x] **2.3 Establish Sequential Dependency:** Ensure the execution pipeline is sequential, meaning the risk assessment context actively feeds into and dictates the final onboarding summary. Include clean try/catch exception handling.
 
-- [ ] **2.4 Incorporate monday.com Integration:** Build out a trial monday.com board containing columns for Risk Level, Reasoning, and Summary. Map your AI pipeline's JSON output directly to this board using the monday.com GraphQL API or Model Context Protocol (MCP).
+- [x] **2.4 Incorporate monday.com Integration:** Build out a trial monday.com board containing columns for Risk Level, Reasoning, and Summary. Map your AI pipeline's JSON output directly to this board using the monday.com GraphQL API or Model Context Protocol (MCP).
+
 - [ ] **2.5 Run End-to-End Test:** Process the 15 applications and verify the output is stable, explainable, sequentially consistent, and presentation-ready.
 
 ### Phase 3: Craft the Strategic Proposal (Estimated Time: 1.5 Hours)

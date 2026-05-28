@@ -95,6 +95,39 @@ def process_application(
     Returns (RiskAssessment, OnboardingSummary).
     Raises RuntimeError if all retries exhausted.
     """
+    langfuse_client = None
+    if callbacks:
+        try:
+            from langfuse import get_client, propagate_attributes
+            langfuse_client = get_client()
+        except ImportError:
+            pass
+
+    if langfuse_client:
+        try:
+            with propagate_attributes(
+                session_id=app["application_id"],
+                tags=["crestview", "intake-pipeline"]
+            ):
+                with langfuse_client.start_as_current_observation(
+                    name="Client Intake Pipeline",
+                    as_type="span"
+                ):
+                    return _run_pipeline(llm, app, rate_limit_delay, max_retries, callbacks)
+        except Exception:
+            # Fallback to standard un-traced execution if tracing setup fails
+            pass
+
+    return _run_pipeline(llm, app, rate_limit_delay, max_retries, callbacks)
+
+
+def _run_pipeline(
+    llm: ChatGoogleGenerativeAI,
+    app: dict,
+    rate_limit_delay: float,
+    max_retries: int,
+    callbacks: list,
+) -> tuple[RiskAssessment, OnboardingSummary]:
     config = {"callbacks": callbacks} if callbacks else {}
     for attempt in range(max_retries + 1):
         try:
