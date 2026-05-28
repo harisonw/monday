@@ -21,7 +21,8 @@
 
 - [x] **1.2 Ingest Case Data:** Copy the 15 client rows provided at the end of the document into a local file named `crestview_client_applications.csv`. Notice the deliberate variance in risk profiles—ranging from straightforward public pension funds to high-risk offshore corporate shells and Politically Exposed Persons (PEPs).
 
-- [ ] **1.3 Validate Dataset Structure:** Confirm the CSV headers, the expected 15 application records, and field consistency before building the pipeline.
+- [x] **1.3 Validate Dataset Structure:** Confirm the CSV headers, the expected 15 application records, and field consistency before building the pipeline.
+
 - [ ] **1.4 Capture Edge Cases:** Note applications that will need special handling in the POC, such as PEPs, offshore entities, recently formed entities, offshore trusts, thin source-of-funds documentation, or incomplete records.
 
 ### Phase 2: Build the Technical POC (Estimated Time: 2 Hours)
