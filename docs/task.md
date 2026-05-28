@@ -32,7 +32,7 @@ Material 1: Internal Account Brief
 
 Prepared by: Maya Torres, Account Executive | Last Updated: January 2026
 
-Account Overview
+Account Overview
 
 Crestview Capital Group is a Top 25 global investment management firm headquartered in New
 York. They manage assets for institutional clients (pension funds, endowments, sovereign
@@ -101,7 +101,7 @@ Regulatory authority; owns
 KYC/AML and compliance
 reviews
 
-Name
+Name
 
 Title
 
@@ -116,21 +116,21 @@ and system integrations
 
 Known Context
 
--  Crestview attempted to automate parts of their onboarding process 10 months ago using
-a robotic process automation (RPA) vendor. The implementation was brittle — it broke
-whenever form layouts changed, couldn't handle exceptions, and created more work for
-the operations team than it saved. David Holloway led that initiative and is cautious
-about technology promises as a result.
+- Crestview attempted to automate parts of their onboarding process 10 months ago using
+  a robotic process automation (RPA) vendor. The implementation was brittle — it broke
+  whenever form layouts changed, couldn't handle exceptions, and created more work for
+  the operations team than it saved. David Holloway led that initiative and is cautious
+  about technology promises as a result.
 
--  Crestview has an enterprise Microsoft 365 / CoPilot agreement. The technology team
+- Crestview has an enterprise Microsoft 365 / CoPilot agreement. The technology team
 
 has been exploring whether existing AI tools could be leveraged for operational
 workflows rather than introducing new vendor dependencies.
 
--  Relationship managers are under significant pressure — they spend the majority of their
-time on onboarding paperwork instead of serving clients. Two senior RMs left in the past
-quarter, citing administrative burden as a factor. The Head of Wealth Management has
-made reducing RM administrative workload a top priority.
+- Relationship managers are under significant pressure — they spend the majority of their
+  time on onboarding paperwork instead of serving clients. Two senior RMs left in the past
+  quarter, citing administrative burden as a factor. The Head of Wealth Management has
+  made reducing RM administrative workload a top priority.
 
 Material 2: Discovery Session Transcript
 
@@ -152,7 +152,7 @@ onto the platform, and I believe monday.com combined with AI can be the backbone
 transformation. I specifically asked for an embedded engineer because I'm done with
 consultants who hand us a playbook and leave.
 
-Maya: That's exactly the FDE model. David, can you walk us through how onboarding works
+Maya: That's exactly the FDE model. David, can you walk us through how onboarding works
 today?
 
 David: Sure. So when a new client decides to invest with us, whether it's an institutional
@@ -194,7 +194,7 @@ documentation is thin. Salesforce is our CRM — that's where relationship manag
 pipeline and client interactions. SharePoint stores all our documents — onboarding packages,
 compliance reports, signed agreements. Outlook handles all communication. And
 
-ComplianceOne is our screening platform for KYC and sanctions checks — it has an API but
+ComplianceOne is our screening platform for KYC and sanctions checks — it has an API but
 we've never integrated it with anything else.
 
 David: The problem is none of these talk to each other. When a relationship manager gets
@@ -238,7 +238,7 @@ Marcus: From a technology perspective, I have two concerns. First, data security
 information — names, addresses, net worth, investment details — is highly sensitive. If we're
 sending that to external AI services, I need to understand the architecture. What data leaves our
 
-network? Where does it go? How is it secured? Second, sustainability. When the FDE leaves in
+network? Where does it go? How is it secured? Second, sustainability. When the FDE leaves in
 six months, my team of four needs to be able to support whatever was built. If it requires
 specialized AI engineering expertise we don't have, it won't survive.
 
@@ -282,7 +282,7 @@ about how this scales from day one.
 Maya: Understood. The FDE will start on-site February 3rd, beginning with two weeks of deep
 discovery. Thank you all.
 
-Material 3: Client Operations — Key Metrics
+Material 3: Client Operations — Key Metrics
 
 Source: Crestview Capital Group Operations Dashboard, Q4 2025
 
@@ -290,7 +290,7 @@ Metric
 
 Current
 
-Industry Benchmark  Target
+Industry Benchmark Target
 
 Average Onboarding
 Time (New Clients)
@@ -314,7 +314,7 @@ Onboarding)
 
 5 business days
 
-85 pending reviews  —
+85 pending reviews —
 
 24
 
@@ -346,40 +346,40 @@ Your audience is Claire Nakamura (COO) and the Crestview leadership team.
 Your proposal should address:
 
 1.  Problem Analysis & Business Case — Synthesize the scenario materials to articulate
-Crestview's core challenges and connect operational problems to business outcomes.
+    Crestview's core challenges and connect operational problems to business outcomes.
 2.  Solution Architecture — Design an end-to-end solution leveraging monday.com as the
 
 operational backbone. Include:
 
--  High-level architecture of your monday.com solution
+- High-level architecture of your monday.com solution
 -
 
 Integration architecture with Crestview's existing systems
 
--  AI capabilities — be specific about what AI approaches you would use, how they
-work technically, and why you chose. Be sure to address stakeholder concerns.
+- AI capabilities — be specific about what AI approaches you would use, how they
+  work technically, and why you chose. Be sure to address stakeholder concerns.
 
--  How you would leverage Crestview's existing technology investments (M365,
+- How you would leverage Crestview's existing technology investments (M365,
 
 CoPilot)
 
 3.  Implementation Roadmap — A phased 6-month plan including:
 
--  How you would sequence discovery, design, build, and rollout
--  Success metrics aligned to each stakeholder's definition of success
--  Risk analysis and mitigation strategies
+- How you would sequence discovery, design, build, and rollout
+- Success metrics aligned to each stakeholder's definition of success
+- Risk analysis and mitigation strategies
 
 4.  Scaling & Product Strategy — How would this solution extend to portfolio operations
-and other departments? What product feedback or feature requests would you bring
-back to monday.com's product team?
+    and other departments? What product feedback or feature requests would you bring
+    back to monday.com's product team?
 
 Format:
 
--  Presentation slides or any format that effectively communicates your proposal to an
+- Presentation slides or any format that effectively communicates your proposal to an
 
 executive audience – be concise!
 
--  You will present this portion in approximately 15-20 minutes
+- You will present this portion in approximately 15-20 minutes
 
 Part 2: Technical Proof of Concept — Intelligent Client Intake
 Processing
@@ -398,19 +398,19 @@ information informed the judgment. This is the capability Priya's compliance tea
 need to trust and act on.
 
 2.  Onboarding Summary Generation — For each application, generate a concise
-onboarding summary suitable for the operations team. Each summary should
-incorporate the risk assessment context and provide an actionable overview: who is this
-client, what do they need, what's the complexity, and what should happen next.
+    onboarding summary suitable for the operations team. Each summary should
+    incorporate the risk assessment context and provide an actionable overview: who is this
+    client, what do they need, what's the complexity, and what should happen next.
 3.  Structured Output — Your pipeline should produce clear, structured results (e.g.,
 
 JSON, CSV, or formatted console output) that could be consumed by a downstream
 system or written to a monday.com board.
 
 4.  End-to-End Pipeline — Demonstrate the complete flow: raw application data in → AI
-processing → structured, enriched output. The risk assessment should inform the
-onboarding summary — these are stages in a pipeline, not independent tasks.
+    processing → structured, enriched output. The risk assessment should inform the
+    onboarding summary — these are stages in a pipeline, not independent tasks.
 
-monday.com Integration (Recommended Extension):
+monday.com Integration (Recommended Extension):
 If time allows, create a board in a monday.com trial account that models a client onboarding
 workflow and populate it with your AI-processed results. This demonstrates the full vision but is
 not required — if you run short on time, be prepared to walk through how you would integrate
@@ -418,58 +418,58 @@ your pipeline with monday.com and discuss the API approach.
 
 Technical Guidelines:
 
--  Write your solution in Python, Node.js/TypeScript, or another modern programming
+- Write your solution in Python, Node.js/TypeScript, or another modern programming
 
 language
 
--  You may interact with monday.com via the GraphQL API directly, via the monday MCP
-with an AI-enabled tool (e.g., Cursor, Claude Desktop), or a combination of approaches
-Integrate with at least one AI model provider (e.g., OpenAI, Anthropic, Google Gemini, or
-similar) — free tier access is sufficient for this exercise
+- You may interact with monday.com via the GraphQL API directly, via the monday MCP
+  with an AI-enabled tool (e.g., Cursor, Claude Desktop), or a combination of approaches
+  Integrate with at least one AI model provider (e.g., OpenAI, Anthropic, Google Gemini, or
+  similar) — free tier access is sufficient for this exercise
 
 -
 
--  Your code should be runnable, demonstrate the complete pipeline and include
+- Your code should be runnable, demonstrate the complete pipeline and include
 
 appropriate error handling
 
 You will demonstrate this POC live (~10-12 minutes) and should be prepared to:
 
--  Walk through your code and explain the architecture
--  Discuss your prompt engineering approach and how you iterated on it
--  Explain how you would harden this for production use at Crestview
--  Discuss the limitations and failure modes of your AI integration
+- Walk through your code and explain the architecture
+- Discuss your prompt engineering approach and how you iterated on it
+- Explain how you would harden this for production use at Crestview
+- Discuss the limitations and failure modes of your AI integration
 
 AI-Assisted Development
 
 A core expectation of the Forward Deployed Engineer role is the expert use of AI tools to
 accelerate delivery and solve complex problems. Throughout your preparation:
 
--  Use AI tools extensively — We expect you to leverage tools such as Claude, ChatGPT,
-Cursor, GitHub Copilot, or similar throughout your work. This includes synthesizing the
-scenario materials, designing your architecture, writing code, and preparing your
-presentation.
+- Use AI tools extensively — We expect you to leverage tools such as Claude, ChatGPT,
+  Cursor, GitHub Copilot, or similar throughout your work. This includes synthesizing the
+  scenario materials, designing your architecture, writing code, and preparing your
+  presentation.
 
--  Document your approach — Keep notes on how you used AI, including specific
+- Document your approach — Keep notes on how you used AI, including specific
 
 examples of prompts, iterations, and where AI was most or least effective.
 
--  Be prepared for a deep discussion — We won't just ask "did you use AI?" — we'll
+- Be prepared for a deep discussion — We won't just ask "did you use AI?" — we'll
 
 explore how you think about AI as a tool. What was your prompting strategy? How did
 you evaluate output quality? Where did you need to intervene or course-correct?
 
--  Demonstrate expertise, not just usage — We're evaluating your ability to leverage AI
-tools at a level you could teach to and implement for an enterprise customer's team.
+- Demonstrate expertise, not just usage — We're evaluating your ability to leverage AI
+  tools at a level you could teach to and implement for an enterprise customer's team.
 
-Deliverables & Presentation
+Deliverables & Presentation
 
 During your interview, you will deliver:
 
 1.  Strategic Transformation Proposal (~15-20 min) — Present your proposal as if Claire
-Nakamura and the Crestview leadership team are in the room. Demonstrate your ability
-to communicate complex technical concepts with strategic clarity to an executive
-audience.
+    Nakamura and the Crestview leadership team are in the room. Demonstrate your ability
+    to communicate complex technical concepts with strategic clarity to an executive
+    audience.
 
 2.  Technical POC Demonstration (~10-15 min) — Walk through your working prototype.
 
@@ -481,12 +481,12 @@ AI expertise, and approach to stakeholder management.
 
 Presentation Format:
 
--  Slides recommended for Part 1; Part 2 is a live code demonstration
--  Be prepared to make modifications, answer technical questions, or run queries live if
+- Slides recommended for Part 1; Part 2 is a live code demonstration
+- Be prepared to make modifications, answer technical questions, or run queries live if
 
 asked
 
--  Be ready to discuss trade-offs, alternative approaches, and what you would do differently
+- Be ready to discuss trade-offs, alternative approaches, and what you would do differently
 
 with more time
 
@@ -511,7 +511,7 @@ Management,28000000,01/07/2026,New,"Retired couple referred by existing client.
 U.S.-based, primary residence in Connecticut. Assets from a combination of
 executive compensation, real estate sales, and inheritance. Seeking
 
-discretionary portfolio management with an income focus and moderate risk
+discretionary portfolio management with an income focus and moderate risk
 tolerance. Standard documentation provided. Straightforward case."
 APP-2026-0303,Apex Global Holdings Ltd,Corporate,Multi-Asset
 Management,500000000,01/08/2026,New,"Corporate entity registered in an offshore
@@ -558,7 +558,7 @@ countries across several regions. KYC documentation is partially complete —
 missing certified copies of fund formation documents and an updated list of
 limited partners."
 
-APP-2026-0308,Linda Vasquez,High-Net-Worth Individual,Wealth
+APP-2026-0308,Linda Vasquez,High-Net-Worth Individual,Wealth
 Management,9500000,01/13/2026,New,"Individual client referred through our
 branch in San Francisco. Recently divorced, assets are from the divorce
 settlement. Seeking conservative portfolio management with a focus on capital
@@ -606,7 +606,7 @@ estate portfolio, and cash from recent stock sales. Seeking diversification
 strategy for the concentrated position, comprehensive wealth management, and
 estate planning coordination. Application notes potential 10b5-1 plan
 
-involvement. Requires coordination with corporate counsel on trading window
+involvement. Requires coordination with corporate counsel on trading window
 restrictions."
 APP-2026-0314,Global Impact Partners Foundation,Institutional,Impact Investing
 and ESG,95000000,01/19/2026,New,"Private foundation focused on climate and
@@ -630,25 +630,23 @@ form."
 
 Resources
 
--  monday.com Academy — https://monday.com/academy
--  monday.com Knowledge Base — https://support.monday.com
--  monday.com API Reference — https://developer.monday.com/api-reference/
--  API Playground — https://developer.monday.com/api-reference/docs/api-playground
--  monday GraphQL JS SDK npm package -
+- monday.com Academy — https://monday.com/academy
+- monday.com Knowledge Base — https://support.monday.com
+- monday.com API Reference — https://developer.monday.com/api-reference/
+- API Playground — https://developer.monday.com/api-reference/docs/api-playground
+- monday GraphQL JS SDK npm package -
 
 https://www.npmjs.com/package/@mondaydotcomorg/api
 
--  monday MCP — https://monday.com/w/mcp
--  monday MCP Setup Guide —
+- monday MCP — https://monday.com/w/mcp
+- monday MCP Setup Guide —
 
 https://support.monday.com/hc/en-us/articles/28588158981266
 
--  monday vibe — https://developer.monday.com/apps/docs/monday-vibe
+- monday vibe — https://developer.monday.com/apps/docs/monday-vibe
 
 Questions?
 
 Feel free to reach out if you have any questions about the assignment.
 
-Good luck from the monday.com team!
-
-
+Good luck from the monday.com team!
